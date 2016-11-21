@@ -1,5 +1,6 @@
-class Api::V1::UsersController < ApplicationController
+class Api::V1::UsersController < ApiController
   before_action :set_api_v1_user, only: [:show, :update, :destroy]
+  skip_before_action :check_session, only: :create
 
   # GET /api/v1/users/1
   def show
@@ -11,6 +12,7 @@ class Api::V1::UsersController < ApplicationController
     @api_v1_user = User.new(api_v1_user_params)
 
     if @api_v1_user.save
+      session[:user_id] = @api_v1_user.id
       render json: @api_v1_user, status: :created
     else
       render json: @api_v1_user.errors, status: :unprocessable_entity
