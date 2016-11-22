@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: [:show, :create, :update, :destroy]
+      get    'session/show',    controller: 'session', action: :show
+      post   'session/create',  controller: 'session', action: :create
+      delete 'session/destroy', controller: 'session', action: :destroy
     end
   end
   get 'home/index'
