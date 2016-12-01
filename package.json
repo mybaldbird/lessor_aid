@@ -1,0 +1,17 @@
+{
+  "name": "LessorAid",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "browserify -t coffeeify -t vueify -e app/assets/javascripts/main.coffee -o app/assets/javascripts/build.js",
+    "watch": "watchify -t coffeeify -t vueify -e app/assets/javascripts/main.coffee -o app/assets/javascripts/build.js"
+  },
+  "devDependencies": {
+    "vue": "*",
+    "vue-router": "*",
+    "vue-resource": "*",
+    "browserify": "*",
+    "vueify": "*",
+    "watchify": "*",
+    "coffeeify": "*"
+  }
+}
