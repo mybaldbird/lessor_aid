@@ -11,6 +11,10 @@ router = new VueRouter
     name: 'Sign In'
     component: require './components/sign_in.vue'
   }, {
+    path: '/join'
+    name: 'Sign Up'
+    component: require './components/join.vue'
+  }, {
     path: '/'
     name: 'Home'
     component: require './components/landing.vue'

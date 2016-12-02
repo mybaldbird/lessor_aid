@@ -14,7 +14,7 @@
     </template>
     <ul v-else>
       <li><router-link to="/signin">sign in</router-link></li>
-      <li>sign up</li>
+      <li><router-link to="/join">sign up</router-link></li>
     </ul>
   </div>
 </template>
