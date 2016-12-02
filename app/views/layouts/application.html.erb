@@ -2,10 +2,14 @@
 <html>
   <head>
     <title>LessorAid</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
-
   <body>
+    <div id="app">
+      <app-nav :current-user="currentUser"></app-nav>
+      <app-flash></app-flash>
+      <router-view :current-user="currentUser"></router-view>
+    </div>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>

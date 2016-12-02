@@ -10,10 +10,4 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require vue2
-//= require vue-router2
-//= require vue-resource 
-//= require_tree .
+//= require build
