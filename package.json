@@ -12,6 +12,7 @@
     "browserify": "*",
     "vueify": "*",
     "watchify": "*",
-    "coffeeify": "*"
+    "coffeeify": "*",
+    "node-sass": "*"
   }
 }
